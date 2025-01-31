@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    width: 60vmin;
+    height: 60vmin;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1rem;
+    font-size: 8vmin;
+    background: #50d4d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.box:hover {
+    background-color: #38a3a5;
+    transform: scale(1.05);
+}
+
+#reset, #newbtn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover, #newbtn:hover {
+    background-color: #333;
+}
+
+#msg {
+    color: #aaaa28;
+    font-size: 5rem;
+    text-transform: uppercase;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.msg-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+/* Animation for the message */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+    justify-content: center;
+}
